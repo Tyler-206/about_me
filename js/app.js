@@ -36,7 +36,7 @@ var q3 = prompt ('Is Tyler\'s favorite sports team the Seahawks? Answer yes or n
 console.log ('Question 3: Is Tyler\'s favorite sports team the Seahawks? ' + user + '\'s answer: ' + q3);
 
 if (q3 === 'no' || q3 === 'n') {
-  alert ('Correct! Great job ' + user + ',the Seahawks are Tyler\'s second favorite team. Tyler\'s favorite team is the Sounders, next question.');
+  alert ('Correct! Great job ' + user + ', the Seahawks are Tyler\'s second favorite team. Tyler\'s favorite team is the Sounders, next question.');
   userPoints++;
 } else {
   alert ('Wrong, The Seahawks are Tyler\'s second favorite team. Tyler\'s favorite team is the Sounders, next question.');
@@ -73,22 +73,42 @@ var tries = 1;
 
 while (tries <= 4 && a6 !== 9){
   var q6 = prompt ('What is my favorite number?');
-  console.log ('Question 6: What is my favorite number ' + user + '\'s answer: ' + q6);
-
   var a6 = parseInt(q6);
-  console.log (a6);
+
+  console.log ('Question 6: What is my favorite number? Try #: ' + tries + ' ' + user + '\'s answer: ' + q6);
 
   if (a6 < 9){
     alert ('too low, try again! You have used ' + tries + ' out of 4 attempts');
   } else if (a6 === 9){
     alert ('Good Job!');
+    userPoints++;
   } else {
     alert ('too high, try again! You have used ' + tries + ' out of 4 attempts');
   }
   tries++;
 }
 
-alert('You get a point wether you got it or not!');
-userPoints++;
+alert('Final question, so far you have gotten ' + userPoints + ' out of ' + total + ' points!');
+
+console.log (user + '\'s Points: ' + userPoints + ' out of ' + total);
+
+tries = 1;
+var states = ['missouri', 'new york', 'florida', 'california'];
+
+while (tries <= 6 && 1 !== states.indexOf (q7)){
+  var q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
+
+  console.log ('Question 7: What states have I lived in? Try #: ' + tries + ' ' + user + '\'s answer: ' + q7);
+
+  if (1 === states.indexOf (q7)){
+    alert ('Great job!');
+    userPoints++;
+  } else {
+    alert ('Try again!');
+  }
+  tries++;
+}
+
+alert('I have lived in Washington, Missouri, New York, Florida and California! You answered ' + userPoints + ' out of ' + total + ' questions! Thanks for playing!!');
 
 console.log (user + '\'s Points: ' + userPoints + ' out of ' + total);
