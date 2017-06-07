@@ -2,7 +2,7 @@ header {
   color:lime;
   background-color: blue;
 }
-ul {
+ul,ol {
   color:blue;
 }
 footer {
