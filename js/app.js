@@ -57,15 +57,16 @@ while (tries <= 4 && a6 !== 9){
   console.log ('Question 6: What is my favorite number? Try #: ' + tries + ' ' + user + '\'s answer: ' + q6);
 
   if (a6 < 9){
-    alert ('Too low, try again! You have used ' + tries + ' out of 4 attempts');
+    alert ('Too low, try again! You have used ' + triesRemaining(tries, 4));
   } else if (a6 === 9){
     alert ('Good Job!');
     userPoints++;
   } else {
-    alert ('Too high, try again! You have used ' + tries + ' out of 4 attempts');
+    alert ('Too high, try again! You have used ' + triesRemaining(tries, 4));
   }
   tries++;
 }
+
 
 alert('Final question, so far you have gotten ' + userPoints + ' out of ' + total + ' points!');
 
@@ -74,12 +75,13 @@ console.log (user + '\'s Points: ' + userPoints + ' out of ' + total);
 tries = 1;
 var states = ['missouri', 'new york', 'florida', 'california'];
 
+
 var q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
 while (tries <= 6 && states.indexOf(q7) === -1 ){
 
   console.log ('Question 7: What states have I lived in? Try #: ' + tries + ' ' + user + '\'s answer: ' + q7);
 
-  alert ('Try again!');
+  alert ('Try again! You have used ' + triesRemaining(tries, 6));
   tries++;
   q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
 }
@@ -112,4 +114,8 @@ function askQuestion(question) {
   }
   console.log(question + user + '\s answer: ' + attempt0);
   return(attempt0.toLowerCase());
+}
+
+function triesRemaining(used, total) {
+  return(used + ' out of ' + total + ' attempts');
 }
