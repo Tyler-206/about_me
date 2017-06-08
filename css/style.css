@@ -1,10 +1,15 @@
 header {
   color:lime;
-  background-color: blue;
 }
 ul,ol {
   color:blue;
 }
 footer {
   color:lime;
+}
+.myName {
+  background-color: blue;
+}
+.bio {
+  color:blue;
 }
