@@ -1,5 +1,7 @@
 # about_me
 
-Pair Programming
-*Navigator: Don Pham
-*Driver: Tyler Walser
+## Peer Programming
+
+* Driver was Don Pham
+* Navigator was Tyler Walser
+
