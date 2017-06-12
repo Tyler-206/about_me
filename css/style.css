@@ -1,24 +1,67 @@
-body {
+head {
+  font-family: Impact, Arial Black, sans-serif;
+  font-weight: bold;
+
+
+
+}
+
+  body {
   width:auto;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(205, 252, 164,0.9) 100%), url(https://seattle-mp7static.mlsdigital.net/styles/retina_desktop_logo/s3/Logo.png?cNYtT9UiZ97uS5x52s8hffq952ECDm7o&itok=_ZbSl-sr);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+
 
 }
 
 header {
-  color:lime;
+  color:#26c13e;
 }
-ul,ol {
-  color:blue;
+
+.column1 {
+float: left;
+width: 300px;
+margin:10px;
+font-weight: bold;
 }
-footer {
-  color:lime;
-}
-.myName {
-  background-color: blue;
-  width: 50%
+
+.column2 {
   float: left;
+  width: 300px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+ul,ol {
+  color:#1c59bc;
+  font-size: 14pt;
+}
+
+h2 {
   text-align: center;
 }
+
+.footer {
+  color: #26c13e;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+.myName {
+  background-color: #1c59bc;
+  text-align: center;
+  border: 15px;
+  padding: 15px;
+  font: Impact;
+}
 .bio {
-  color:blue;
-  width: 50%;
+  color:black;
+  width: 100%;
+  text-align: center;
 }

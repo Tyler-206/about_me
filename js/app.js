@@ -8,45 +8,54 @@ console.log ('User\'s name is ' + user);
 
 alert ('Hello ' + user + ' thank you for visiting my "about me" page, answer the next 7 questions to get to know me:');
 
-var q1 = askQuestion('Does Tyler ride the bus to class? Answer yes or no');
+// Question #1
+function question1() {
+  var q1 = askQuestion('Does Tyler ride the bus to class? Answer yes or no');
 
-if (checkAnswer(q1, 'yes')) {
-  alert ('Correct! Great job ' + user + ', next question');
-  userPoints++;
+  if (checkAnswer(q1, 'yes')) {
+    alert ('Correct! Great job ' + user + ', next question');
+    userPoints++;
 
-} else {
-  alert ('Wrong, Tyler rides the bus becuase parking is too expensive! and theres crazy traffic to boot! Next question.');
-};
-
-var q2 = askQuestion('Is Tyler from Seattle?');
-if (checkAnswer(q2, 'yes')) {
-  alert ('Correct! Great job ' + user + ', next question.');
-} else {
-  alert ('Wrong, Tyler is in fact from Seattle, next question.');
-};
-
-var q3 = askQuestion('Is Tyler\'s favorite sports team the Seahawks?');
-if (checkAnswer(q3, 'no')) {
-  alert ('Correct! Great job ' + user + ', the Seahawks are Tyler\'s second favorite team. Tyler\'s favorite team is the Sounders, next question.');
-} else {
-  alert ('Wrong, The Seahawks are Tyler\'s second favorite team. Tyler\'s favorite team is the Sounders, next question.');
-};
-
-var q4 = askQuestion('Does Tyler have a dog named Woolly Mammoth? Answer yes or no', 'type yes or no' ).toLowerCase();
-console.log ('Question 4: Does Tyler have a dog named Woolly Mammoth? ' + user + '\'s answer: ' + q4);
-
-if (checkAnswer(q4, 'yes')) {
-  alert ('Correct! Great job ' + user + ', next question.');
-} else {
-  alert ('Wrong, Tyler\'s dog is infact named Woolly Mammoth, next question.');
-};
-
-var q5 = askQuestion('Does Tyler have a cat named "cat"?');
-if (checkAnswer(q5, 'no')) {
-  alert ('Correct! Tyler\'s cat is named Dinosaur. Great job ' + user + ', thanks for taking a stab at these get to know me questions! Let\'s do a couple more');
-} else {
-  alert ('Wrong, Tyler\'s cat is named Dinosaur, thanks for trying to answer these get to know me questions! Let\'s do a couple more');
-};
+  } else {
+    alert ('Wrong, Tyler rides the bus becuase parking is too expensive! and theres crazy traffic to boot! Next question.');
+  };
+}
+// Question #2
+function question2() {
+  var q2 = askQuestion('Is Tyler from Seattle?');
+  if (checkAnswer(q2, 'yes')) {
+    alert ('Correct! Great job ' + user + ', next question.');
+  } else {
+    alert ('Wrong, Tyler is in fact from Seattle, next question.');
+  };
+}
+// Question #3
+function question3() {
+}
+// Question #4
+function question4() {
+  var q4 = askQuestion('Does Tyler have a dog named Woolly Mammoth?');
+  if (checkAnswer(q4, 'yes')) {
+    alert ('Correct! Great job ' + user + ', next question.');
+  } else {
+    alert ('Wrong, Tyler\'s dog is infact named Woolly Mammoth, next question.');
+  };
+}
+// Question #5
+function question5() {
+  var q5 = askQuestion('Does Tyler have a cat named "cat"?');
+  if (checkAnswer(q5, 'no')) {
+    alert ('Correct! Tyler\'s cat is named Dinosaur. Great job ' + user + ', thanks for taking a stab at these get to know me questions! Let\'s do a couple more');
+  } else {
+    alert ('Wrong, Tyler\'s cat is named Dinosaur, thanks for trying to answer these get to know me questions! Let\'s do a couple more');
+  };
+}
+//Calling functions 1 - 5
+question1();
+question2();
+question3();
+question4();
+question5();
 
 var tries = 1;
 
