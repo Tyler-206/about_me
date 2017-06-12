@@ -1,3 +1,8 @@
+body {
+  width:auto;
+
+}
+
 header {
   color:lime;
 }
@@ -9,7 +14,11 @@ footer {
 }
 .myName {
   background-color: blue;
+  width: 50%
+  float: left;
+  text-align: center;
 }
 .bio {
   color:blue;
+  width: 50%;
 }
