@@ -58,23 +58,27 @@ question4();
 question5();
 
 var tries = 1;
+//Question #6
+function question6() {
+  while (tries <= 4 && a6 !== 9){
+    var q6 = prompt ('What is my favorite number?');
+    var a6 = parseInt(q6);
 
-while (tries <= 4 && a6 !== 9){
-  var q6 = prompt ('What is my favorite number?');
-  var a6 = parseInt(q6);
+    console.log ('Question 6: What is my favorite number? Try #: ' + tries + ' ' + user + '\'s answer: ' + q6);
 
-  console.log ('Question 6: What is my favorite number? Try #: ' + tries + ' ' + user + '\'s answer: ' + q6);
-
-  if (a6 < 9){
-    alert ('Too low, try again! You have used ' + triesRemaining(tries, 4));
-  } else if (a6 === 9){
-    alert ('Good Job!');
-    userPoints++;
-  } else {
-    alert ('Too high, try again! You have used ' + triesRemaining(tries, 4));
+    if (a6 < 9){
+      alert ('Too low, try again! You have used ' + triesRemaining(tries, 4));
+    } else if (a6 === 9){
+      alert ('Good Job!');
+      userPoints++;
+    } else {
+      alert ('Too high, try again! You have used ' + triesRemaining(tries, 4));
+    }
+    tries++;
   }
-  tries++;
 }
+//Calling question6
+question6();
 
 alert('Final question, so far you have gotten ' + userPoints + ' out of ' + total + ' points!');
 
@@ -83,20 +87,25 @@ console.log (user + '\'s Points: ' + userPoints + ' out of ' + total);
 tries = 1;
 var states = ['missouri', 'new york', 'florida', 'california'];
 
-var q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
+//Question #7
+function question7() {
+  var q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
 
-while (tries <= 6 && states.indexOf(q7) === -1 ){
+  while (tries <= 6 && states.indexOf(q7) === -1 ){
 
-  console.log ('Question 7: What states have I lived in? Try #: ' + tries + ' ' + user + '\'s answer: ' + q7);
+    console.log ('Question 7: What states have I lived in? Try #: ' + tries + ' ' + user + '\'s answer: ' + q7);
 
-  alert ('Try again! You have used ' + triesRemaining(tries, 6));
-  tries++;
-  q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
+    alert ('Try again! You have used ' + triesRemaining(tries, 6));
+    tries++;
+    q7 = prompt ('What states have I lived in other than Washington?').toLowerCase();
+  }
+  if (states.indexOf(q7) !== -1) {
+    alert ('Good Job!');
+    userPoints++;
+  }
 }
-if (states.indexOf(q7) !== -1) {
-  alert ('Good Job!');
-  userPoints++;
-}
+//Calling question7
+question7();
 
 console.log (user + '\'s Points: ' + userPoints + ' out of ' + total);
 
